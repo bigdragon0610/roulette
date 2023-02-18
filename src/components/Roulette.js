@@ -12,11 +12,12 @@ const Roulette = () => {
   const cymbal = new Audio(Cymbal);
 
   const playAudio = () => {
-    setTimeout(() => setModalIsOpen(true), 4000);
     setTimeout(() => {
+      setTimeout(() => setModalIsOpen(true), 500);
       cymbal.play();
+      drumRoll.pause();
       setIsRolling(false);
-    }, 3000);
+    }, 2500);
     drumRoll.play();
   };
 
